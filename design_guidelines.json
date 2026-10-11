@@ -1,0 +1,168 @@
+{
+  "app_name": "ApexFX & Crypto Pro",
+  "personality": "7 Dark-First Utility",
+  "personality_one_liner": "A high-performance institutional terminal built for precision trading, lightning-fast execution, and live market telemetry.",
+  "color": {
+    "surface": "#0E1116",
+    "onSurface": "#F0F4F8",
+    "surfaceSecondary": "#161B22",
+    "onSurfaceSecondary": "#C9D1D9",
+    "surfaceTertiary": "#21262D",
+    "onSurfaceTertiary": "#8B949E",
+    "surfaceInverse": "#F0F4F8",
+    "onSurfaceInverse": "#0E1116",
+    "brand": "#FF5722",
+    "brandPrimary": "#FF5722",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#E64A19",
+    "onBrandSecondary": "#FFFFFF",
+    "brandTertiary": "rgba(255, 87, 34, 0.15)",
+    "onBrandTertiary": "#FF5722",
+    "success": "#238636",
+    "onSuccess": "#FFFFFF",
+    "warning": "#D29922",
+    "onWarning": "#FFFFFF",
+    "error": "#DA3633",
+    "onError": "#FFFFFF",
+    "info": "#388BFd",
+    "onInfo": "#FFFFFF",
+    "border": "#30363D",
+    "borderStrong": "#FF5722",
+    "divider": "#21262D",
+    "muted": "#8B949E",
+    "onBrand": "#FFFFFF"
+  },
+  "typography": {
+    "displayFontFamily": "Barlow Condensed",
+    "textFontFamily": "Satoshi",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous touch spacing with compact data density for fast market scanning and order execution.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": "0",
+  "navigation": "bottom_tabs",
+  "icon_set": "MaterialCommunityIcons",
+  "glassmorphism": {
+    "enabled": false,
+    "do's": [
+      "Use solid obsidian and graphite surfaces for maximum telemetry contrast",
+      "Use tabular monospace numbers for all live pricing tickers and PnL"
+    ],
+    "dont's": [
+      "No heavy blur or glassmorphism on dense data tables",
+      "No decorative gradients behind numeric metrics"
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Auth",
+      "purpose": "Secure institutional login with CRM token validation and biometric handshake.",
+      "states": {
+        "loading": "Authenticating secure CRM tunnel...",
+        "empty": "Please enter your Trading ID and Password to connect.",
+        "error": "Authentication failed. Check credentials or CRM bridge status."
+      },
+      "layout": "Centered clean dark card with glowing warm orange accent border, secure input fields for ID and password, and prominent biometric login option."
+    },
+    {
+      "name": "Watchlist",
+      "purpose": "Real-time FastForex API pricing feed blotter across forex, crypto, and commodities.",
+      "states": {
+        "loading": "Connecting to FastForex WebSocket feed...",
+        "empty": "No trading pairs added to watchlist.",
+        "error": "Failed to fetch price feeds. Tap to retry connection."
+      },
+      "layout": "Tabular blotter layout with category filter chips (All, Forex, Crypto, Metals), live bid/ask quotes, delta sparklines, and 1-tap quick trade execution."
+    },
+    {
+      "name": "Chart",
+      "purpose": "Embedded TradingView advanced charting widget with real-time indicators and integrated Buy/Sell execution buttons.",
+      "states": {
+        "loading": "Loading TradingView chart engine...",
+        "empty": "Select a symbol to load chart telemetry.",
+        "error": "TradingView widget failed to load. Retry connection."
+      },
+      "layout": "Full-screen native wrapper around TradingView Advanced Charts with timeframe selector (1M, 5M, 1H, 1D), technical indicator toggles, and sticky bottom Buy/Sell order execution bar configured with lot size commission calculator ($20/lot)."
+    },
+    {
+      "name": "Positions",
+      "purpose": "Active trades and order history linked to CRM database with live P&L tracking and commission accounting.",
+      "states": {
+        "loading": "Syncing active positions from CRM database...",
+        "empty": "No active open positions or trade history.",
+        "error": "Failed to sync CRM database. Verify network connection."
+      },
+      "layout": "Card-based ledger showing open positions with live profit/loss, margin utilization, lot size calculation ($20 commission per lot), and instant close/modify controls."
+    },
+    {
+      "name": "Settings",
+      "purpose": "Account configuration, CRM status, leverage limits, and commission profile details.",
+      "states": {
+        "loading": "Loading account profile...",
+        "empty": "No account data found.",
+        "error": "Failed to load account settings."
+      },
+      "layout": "Structured settings list with account leverage status (e.g. 10 lots max for $10,000 account, 0.01 lot for $100 account), CRM sync status badge, and security preferences."
+    }
+  ],
+  "images": {
+    "auth_bg": {
+      "url": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1200&auto=format&fit=crop",
+      "dark": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1200&auto=format&fit=crop",
+      "alt": "Subtle abstract trading telemetry background"
+    },
+    "crypto_btc": {
+      "url": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png",
+      "alt": "Bitcoin Logo"
+    },
+    "crypto_eth": {
+      "url": "https://assets.coingecko.com/coins/images/279/large/ethereum.png",
+      "alt": "Ethereum Logo"
+    },
+    "forex_eur": {
+      "url": "https://flagcdn.com/w80/eu.png",
+      "alt": "EUR Flag"
+    },
+    "forex_gbp": {
+      "url": "https://flagcdn.com/w80/gb.png",
+      "alt": "GBP Flag"
+    },
+    "forex_usd": {
+      "url": "https://flagcdn.com/w80/us.png",
+      "alt": "USD Flag"
+    }
+  },
+  "instructions_to_main_agent": "Ensure the app uses a pristine white-to-obsidian theme as requested (background changed from pink), integrate TradingView widget into the Chart tab, FastForex API feed into the Watchlist tab, and retain all existing backend CRM endpoints without modification. Implement lot size commission calculation ($20/lot, e.g. 1 lot = $20, 10 lots = $200) and leverage rules ($1000 = max 1 lot, $10000 = max 10 lots, $100 = 0.01 lot). Include sticky Buy/Sell execution buttons in Chart and Positions tabs."
+}
